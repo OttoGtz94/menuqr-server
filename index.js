@@ -1,8 +1,11 @@
 import express from 'express';
 import router from './routes/index.js';
 import db from './config/db.js';
+import cors from 'cors';
 
 const app = express();
+// habilitar cors
+app.use(cors());
 
 // conectar a bd mysql
 db.authenticate()

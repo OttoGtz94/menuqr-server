@@ -20,11 +20,8 @@ import {
 const router = express.Router();
 
 router.post('/comidas', saveFood);
-
 router.get('/comidas', getFoods);
-
 router.put('/comidas/:id', updateFood);
-
 router.delete('/comidas/:id', deleteFood);
 
 router.post('/bebidas', saveDrink);

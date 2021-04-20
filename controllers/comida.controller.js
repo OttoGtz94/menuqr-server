@@ -9,19 +9,22 @@ const saveFood = async (req, res) => {
 		image,
 		description,
 	} = req.body;
-	console.log(req);
-
+	console.log(req.body);
+	// console.log(DataTypes.JSON);
 	try {
 		await Comida.create({
-			name: name,
-			price: price,
-			ingredients: ingredients,
-			image: image,
-			description: description,
+			name,
+			price,
+			ingredients,
+			image,
+			description,
 		});
+		// console.clear();
+
 		res.json({
 			message: 'Guardado en BD',
 		});
+		// console.log(resultado);
 		return;
 	} catch (error) {
 		console.log(error);
